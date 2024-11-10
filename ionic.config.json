@@ -1,0 +1,7 @@
+{
+  "name": "Minigames-mobile",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
