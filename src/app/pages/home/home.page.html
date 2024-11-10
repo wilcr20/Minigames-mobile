@@ -1,0 +1,23 @@
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+
+    <div id="cards-container" *ngIf="minigames.length > 0">
+      <ion-card *ngFor="let minigame of minigames" >
+        <img *ngIf="minigame.image != ''" src={{getImagePath(minigame.image)}} />
+        <ion-card-header>
+          <ion-card-title>{{minigame.name}}</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </div>
+
+
+
+  </div>
+</ion-content>
