@@ -1,0 +1,18 @@
+<ion-content [fullscreen]="true">
+  
+  <div id="container">
+    <div *ngIf="grid.length > 0">
+      <div class="row" *ngFor="let row of grid; let x = index">
+        <div (click)="selectCell(x, y)" class="column" *ngFor="let column of row; let y = index;">
+          <span >{{grid[x][y]}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="infoSection">
+      <p>Es el turno de <span>{{playerTurn}}</span></p> 
+    </div>
+  </div>
+  
+
+</ion-content>
