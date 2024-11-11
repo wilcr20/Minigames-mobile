@@ -14,23 +14,49 @@ ion-content {
         width: 80%;
         // justify-content: space-between;
         justify-content: center;
-        .column{
+
+        .column {
             border: 5px solid black;
             height: 90px;
             width: 100px;
-            background-color: #ffa437;
+            background-color: #a5753c;
             font-size: 4rem;
+
+            &.cellPlayed {
+                background-color: #ff8d00;
+            }
+            &.cellWin{
+                background-color: #35b535;
+            }
         }
     }
 
-    .infoSection{
-        p{
-            font-size: 2rem;
+    .infoSection {
+        p {
+            font-size: 1.25rem;
             color: white;
-            span{
+
+            span {
                 font-style: italic;
                 color: orangered;
             }
         }
     }
+
+    .buttons {
+        // border: 2px solid red;
+        width: 65%;
+        margin: auto;
+
+        button {
+            border: 3px solid black;
+            font-size: 1.10rem;
+            border-radius: 30px;
+            padding: 10px;
+            margin-bottom: 5%;
+            font-weight: bold;
+            width: -webkit-fill-available;
+        }
+    }
+
 }

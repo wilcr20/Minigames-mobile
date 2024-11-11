@@ -3,14 +3,29 @@
   <div id="container">
     <div *ngIf="grid.length > 0">
       <div class="row" *ngFor="let row of grid; let x = index">
-        <div (click)="selectCell(x, y)" class="column" *ngFor="let column of row; let y = index;">
+        <div (click)="selectCell(x, y)" class="column" [ngClass]="{'cellPlayed': grid[x][y] != '', 'cellWin':cellsWinner.includes(x+','+y)}"
+        *ngFor="let column of row; let y = index;">
           <span >{{grid[x][y]}}</span>
         </div>
       </div>
     </div>
 
     <div class="infoSection">
-      <p>Es el turno de <span>{{playerTurn}}</span></p> 
+      <div *ngIf="!hasWinner && !isTied">
+        <p>Es el turno de <span>{{playerTurn}}</span></p> 
+        <p>Turnos faltantes por jugar: <span>{{getEmptySpacesCount()}}</span></p>
+      </div>
+      <div *ngIf="hasWinner && !isTied">
+        <p>Ganador: <span>{{playerTurn}}</span></p>
+      </div>
+      <div *ngIf="isTied">
+        <p>Empate!!</p>
+      </div>
+
+    </div>
+    <div class="buttons">
+      <button *ngIf="getEmptySpacesCount() != 9" (click)="resetGame()">Reiniciar partida</button>
+      <button (click)="backToHomePage()">Volver al menú principal</button>
     </div>
   </div>
   
