@@ -1,0 +1,17 @@
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+    <div style="border: 3px solid orange; background-color: black;">
+      <div class="wrap">
+        <section id="ws-area"></section>
+        <ul class="ws-words"></ul> 
+      </div>
+    </div>
+
+    <div class="buttons">
+      <!--<button *ngIf="getEmptySpacesCount() != 9" (click)="resetGame()">Reiniciar partida</button> -->
+      <button (click)="backToHomePage()">Volver al menú principal</button>
+    </div>
+  </div>
+
+</ion-content>

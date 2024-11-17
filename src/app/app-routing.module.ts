@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'tic-tac-toe',
     loadChildren: () => import('./pages/tic-tac-toe/tic-tac-toe.module').then( m => m.TicTacToePageModule)
   },
+  {
+    path: 'word-search',
+    loadChildren: () => import('./pages/word-search/word-search.module').then( m => m.WordSearchPageModule)
+  },
 ];
 
 @NgModule({

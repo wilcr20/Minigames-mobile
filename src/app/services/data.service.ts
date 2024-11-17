@@ -7,7 +7,7 @@ export class DataService {
 
   constructor() { }
 
-  getMinigames(): Array<any>{
+  getMinigames(): Array<any> {
     return [
       {
         "name": "Tres en línea",
@@ -28,7 +28,7 @@ export class DataService {
         id: 3,
         "backgroundColor": "",
         "image": "word-search.png",
-        "url": "/"
+        "url": "word-search"
       },
       {
         "name": "Ahorcado",
@@ -52,5 +52,11 @@ export class DataService {
         "url": "/"
       }
     ]
+  }
+
+  getTermsForWordSearch(): Array<string> {
+    return ["casa", "pato", "avenida", "hielo", "aire", "fuego", "cable", "pantalla", "mañana", "ayer", "wifi", "zorro",
+      "mapache", "vaso", "boca", "hueso", "huevo", "palabra", "acento", "color", "azul", "rojo", "verde", "cuadro", "letras"
+    ];
   }
 }
