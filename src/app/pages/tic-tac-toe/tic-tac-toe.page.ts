@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
 export class TicTacToePage {
   generateVisualInterface = false;
   hasWinner = false;
-  isTied = false;
+  isDraw = false;
   grid: Array<Array<string>> = [];
   playerTurn: string = Math.random() > 0.5 ? Symbols.X : Symbols.O;
   cellsWinner: Array<String> = [];
@@ -67,7 +67,7 @@ export class TicTacToePage {
 
   resetGame() {
     this.hasWinner = false;
-    this.isTied = false;
+    this.isDraw = false;
     this.createInitialGrid();
     this.playerTurn = Math.random() > 0.5 ? Symbols.X : Symbols.O;
   }
@@ -129,7 +129,7 @@ export class TicTacToePage {
     }
 
     if(this.getEmptySpacesCount() == 0){
-      this.isTied = true;
+      this.isDraw = true;
       return;
     }
 

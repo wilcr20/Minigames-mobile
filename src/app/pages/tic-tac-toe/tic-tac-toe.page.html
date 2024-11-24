@@ -11,15 +11,17 @@
     </div>
 
     <div class="infoSection">
-      <div *ngIf="!hasWinner && !isTied">
+      <div *ngIf="!hasWinner && !isDraw">
         <p>Es el turno de <span>{{playerTurn}}</span></p> 
-        <p>Turnos faltantes por jugar: <span>{{getEmptySpacesCount()}}</span></p>
+        <p>Turnos restantes por jugar: <span>{{getEmptySpacesCount()}}</span></p>
       </div>
-      <div *ngIf="hasWinner && !isTied">
+      <div *ngIf="hasWinner && !isDraw">
         <p>Ganador: <span>{{playerTurn}}</span></p>
+        <img src="../../../assets/images/winGame.png" alt="" srcset="">
       </div>
-      <div *ngIf="isTied">
+      <div *ngIf="isDraw">
         <p>Empate!!</p>
+        <img  src="../../../assets/images/drawGame.png" alt="" srcset="">
       </div>
 
     </div>

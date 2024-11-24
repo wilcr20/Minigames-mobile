@@ -33,7 +33,8 @@ ion-content {
 
     .infoSection {
         p {
-            font-size: 1.25rem;
+            // font-size: 1.25rem;
+            font-size: 5vw;
             color: white;
 
             span {
@@ -41,16 +42,21 @@ ion-content {
                 color: orangered;
             }
         }
+        img{
+            width: 50vw;
+        }
     }
 
     .buttons {
         // border: 2px solid red;
         width: 65%;
         margin: auto;
+        padding-top: 0.5em;
 
         button {
             border: 3px solid black;
-            font-size: 1.10rem;
+            // font-size: 1.10rem;
+            font-size: 4.5vw;
             border-radius: 30px;
             padding: 10px;
             margin-bottom: 5%;
